@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react"
 import styled from "styled-components"
 
-const Body = styled.div`
-
+const Flag = styled.img`
+  display: block;
+  margin: auto;
+  margin-top: 100px;
+  width: 500px;
+  border-style: solid;
 `
 
 function App() {
@@ -20,7 +24,7 @@ function App() {
 
   return (
     <div>
-      <img src={flag} alt={name} />
+      {country && <Flag src={flag} alt={name} />}
     </div>
   )
 }
